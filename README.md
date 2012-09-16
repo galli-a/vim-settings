@@ -1,0 +1,1 @@
+My vim settings. This will contain my configuration file (`vimrc`) and plugin folder (`vim`) 
