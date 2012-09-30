@@ -9,6 +9,12 @@ call pathogen#runtime_append_all_bundles()
 " prevent vi compatibility mode
 set nocompatible
 
+" allow hidden buffers
+set hidden
+
+" Explicitly tell vim that the terminal supports 256 colors
+set t_Co=256 
+
 " ???
 set modelines=0
 
@@ -27,6 +33,22 @@ let g:solarized_termtrans = 1
 colorscheme solarized
 " bind F5 to toggle background color
 call togglebg#map("<F5>")
+
+" set font
+if has("unix")
+	set guifont=Inconsolata-dz\ for\ Powerline:h12
+else
+	set guifont=Consolas\ for\ Powerline\ FixedD:h12:cANSI
+endif
+
+" make windows transparent
+set transparency=5
+
+" hide toolbar and menubar on windows
+if has("win32") || has("win64")
+	set guioptions-=m
+	set guioptions-=T
+end
 
 " always show the status line
 set laststatus=2
@@ -103,7 +125,11 @@ nnoremap <leader><space> :noh<CR>
 " show invisible characters
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-set listchars=tab:➟\ ,eol:⤦
+if has("unix")
+	set listchars=tab:➟\ ,eol:⤦
+else
+	set listchars=tab:→\ ,eol:▼
+end
 
 " disable arrow keys
 nnoremap <up> <nop>
@@ -126,4 +152,3 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
-
