@@ -17,6 +17,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
+Bundle 'galli-a/my_powerline_theme'
 
 " vim-script repos
 
