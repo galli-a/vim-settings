@@ -1,13 +1,38 @@
-" uses pathogen
-call pathogen#infect()
-syntax on
-filetype plugin indent on
-call pathogen#helptags()
-filetype off
-call pathogen#runtime_append_all_bundles()
+"" uses pathogen
+"call pathogen#infect()
+"syntax on
+"filetype plugin indent on
+"call pathogen#helptags()
+"filetype off
+"call pathogen#runtime_append_all_bundles()
 
 " prevent vi compatibility mode
 set nocompatible
+
+" uses vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" plugin list
+"
+" original repos on github
+Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-surround'
+
+" vim-script repos
+
+" non github repos
+
+filetype plugin indent on
+
+
 
 " allow hidden buffers
 set hidden
@@ -42,7 +67,9 @@ else
 endif
 
 " make windows transparent
-set transparency=5
+if has("macunix")
+	set transparency=5
+end
 
 " hide toolbar and menubar on windows
 if has("win32") || has("win64")
