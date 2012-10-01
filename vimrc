@@ -78,6 +78,7 @@ set encoding=utf-8
 let g:Powerline_theme="skwp_mio"
 let g:Powerline_colorscheme="skwp"
 let g:Powerline_symbols='fancy'
+
 " set minimum number of visible lines above and below the cursos
 set scrolloff=3
 
