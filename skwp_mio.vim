@@ -5,6 +5,7 @@
 "
 " Line info taken out - I know which line number I'm on from the gutter
 "\ , 'lineinfo'
+
 let g:Powerline#Themes#skwp_mio#theme = Pl#Theme#Create(
 	\ Pl#Theme#Buffer(''
 		\ , 'fugitive:branch'
@@ -15,7 +16,12 @@ let g:Powerline#Themes#skwp_mio#theme = Pl#Theme#Create(
 		\ , Pl#Segment#Split()
 		\ , 'sass:status'
 		\ , 'rvm:string'
+		\ , 'fileformat'
+		\ , 'fileencoding'
+		\ , 'filetype'
+		\ , 'scrollpercent'
 		\ , 'paste_indicator'
+		\ , 'lineinfo'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('command_t'
@@ -39,16 +45,11 @@ let g:Powerline#Themes#skwp_mio#theme = Pl#Theme#Create(
 		\ , Pl#Segment#Split()
 	\ ),
 	\
-	\ Pl#Theme#Buffer('ft_help'
+	\ Pl#Theme#Buffer('bt_help'
 		\ , ['static_str.name', 'Help']
 		\ , 'filename'
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
-		\ , 'fileformat'
-		\ , 'fileencoding'
-		\ , 'filetype'
-		\ , 'scrollpercent'
-		\ , 'lineinfo'
 	\ ),
 	\
 	\ Pl#Theme#Buffer('ft_vimpager'
