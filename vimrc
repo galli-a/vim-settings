@@ -3,7 +3,11 @@ set nocompatible
 
 " uses vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+if has("unix")
+	set rtp+=~/.vim/bundle/vundle/
+else
+	set rtp+=~/vimfiles/bundle/vundle/
+end
 call vundle#rc()
 
 " let Vundle manage Vundle
