@@ -1,3 +1,3 @@
 " copy into $HOME and rename to .vimrc
-set runtimepath+=~/vim-settings
-source ~/vim-settings/vimrc
+set runtimepath+=$HOME/vim-settings
+source $HOME/vim-settings/vimrc
