@@ -6,7 +6,7 @@ filetype off
 if has("unix")
 	set rtp+=~/.vim/bundle/vundle/
 else
-	set rtp+=~/vimfiles/bundle/vundle/
+	set rtp+=~/.vim/bundle/vundle/
 end
 call vundle#rc()
 
