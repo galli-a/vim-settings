@@ -1,6 +1,9 @@
 " prevent vi compatibility mode
 set nocompatible
 
+" set encoding to UTF-8
+set encoding=utf-8
+
 " uses vundle
 filetype off
 if has("unix")
@@ -41,6 +44,10 @@ set t_Co=256
 " ???
 set modelines=0
 
+" wrap lines, only at word boundaries
+set wrap
+set linebreak
+
 " load solarized color scheme
 " set dark background
 if has('gui_running')
@@ -77,8 +84,6 @@ end
 
 " always show the status line
 set laststatus=2
-" set encoding to UTF-8
-set encoding=utf-8
 
 " powerline settings
 let g:Powerline_theme="skwp_mio"
@@ -100,10 +105,15 @@ set showcmd
 set wildmenu
 set wildmode=list:longest,full
 
+" set leader key
+let mapleader="\\"
+
 " quick edit .vimrc
-nmap <silent> <leader>se :e $MYVIMRC<CR>
+nmap <silent> <Leader>se :e $MYVIMRC<CR>
 " quick reload .vimrc
 nmap <silent> <Leader>sv :source $MYVIMRC<CR>
+" quick edit full configuration file
+nmap <silent> <Leader>ss :e $HOME/vim-settings/vimrc<CR>
 
 " highlight current line
 set cursorline
@@ -166,6 +176,9 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" reload modified files
+set autoread
 
 " save on lost focus
 au FocusLost * :wa
