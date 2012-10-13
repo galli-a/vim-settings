@@ -31,6 +31,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'scrooloose/nerdtree'
 Bundle 'galli-a/my_powerline_theme'
 
 " vim-script repos
@@ -197,6 +198,9 @@ au FocusLost * :wa
 
 " quick access to gundo
 nnoremap <F6> :GundoToggle<CR>
+
+" quick access to NERDTree
+nnoremap <leader>nt :NERDTree<CR>
 
 " set tabbing options
 set tabstop=4
