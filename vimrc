@@ -8,6 +8,7 @@ set encoding=utf-8
 filetype off
 " Setting up Vundle
 let iCanHazVundle=1
+set shellxquote=""
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
 	echo "Installing Vundle..."
@@ -200,10 +201,38 @@ au FocusLost * :wa
 nnoremap <F6> :GundoToggle<CR>
 
 " quick access to NERDTree
-nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>nt :NERDTreeToggle %:p:h<CR>
 
 " set tabbing options
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+" 
+" " set netrw options
+" let g:netrw_liststyle=3 " user tree-mode as default view
+" let g:netrw_browse_split=4 " open file in previous buffer
+" let g:netrw_preview=1 " preview window shown in a vertical split
+" let g:netrw_winsize=30 " limit preview window to 80%
+" let g:netrw_altv=1
+" 
+" " Toggle Vexplore with Ctrl-E
+" function! ToggleVExplorer()
+"   if exists("t:expl_buf_num")
+"       let expl_win_num = bufwinnr(t:expl_buf_num)
+"       if expl_win_num != -1
+"           let cur_win_nr = winnr()
+"           exec expl_win_num . 'wincmd w'
+"           close
+"           exec cur_win_nr . 'wincmd w'
+"           unlet t:expl_buf_num
+"       else
+"           unlet t:expl_buf_num
+"       endif
+"   else
+"       exec '1wincmd w'
+"       Vexplore
+"       let t:expl_buf_num = bufnr("%")
+"   endif
+" endfunction
+" map <silent> <C-E> :call ToggleVExplorer()<CR>
