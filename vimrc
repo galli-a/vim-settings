@@ -6,11 +6,17 @@ set encoding=utf-8
 
 " uses vundle
 filetype off
-if has("unix")
-	set rtp+=~/.vim/bundle/vundle/
-else
-	set rtp+=~/.vim/bundle/vundle/
-end
+" Setting up Vundle
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+	echo "Installing Vundle..."
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let iCanHazVundle=0
+endif
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -30,6 +36,12 @@ Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 
 " non github repos
+if iCanHazVundle == 0
+	echo "Installing Bundles, please ignore key map error messages"
+	echo ""
+	:BundleInstall
+endif
+" end setting up Vundle
 
 filetype plugin indent on
 
