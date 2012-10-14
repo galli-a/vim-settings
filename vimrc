@@ -33,6 +33,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-scripts/YankRing.vim'
 Bundle 'galli-a/my_powerline_theme'
 
 " vim-script repos
@@ -208,7 +210,13 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+
+" configure quick access to YankRing
+nnoremap <silent> <F4> :YRShow<cr>
+inoremap <silent> <F4> <ESC>:YRShow<cr>
+
 " 
+"
 " " set netrw options
 " let g:netrw_liststyle=3 " user tree-mode as default view
 " let g:netrw_browse_split=4 " open file in previous buffer
