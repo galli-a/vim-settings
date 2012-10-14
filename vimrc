@@ -110,6 +110,9 @@ let g:Powerline_symbols='fancy'
 " set minimum number of visible lines above and below the cursos
 set scrolloff=3
 
+" display text even when paragraph exits the screen
+set display=lastline
+
 " set automatic indentation
 set autoindent
 
@@ -180,8 +183,10 @@ nnoremap <leader><space> :noh<CR>
 nmap <leader>l :set list!<CR>
 if has("unix")
 	set listchars=tab:➟\ ,eol:⤦
+	set showbreak=…
 else
 	set listchars=tab:→\ ,eol:▼
+	set showbreak=…
 end
 
 " disable arrow keys
