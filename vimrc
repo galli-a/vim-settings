@@ -35,6 +35,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'vim-scripts/scratch.vim'
 Bundle 'galli-a/my_powerline_theme'
 
 " vim-script repos
