@@ -261,3 +261,9 @@ endif
 
 " set paragraph formatting through external command
 set formatprg=par\ -w80rgeq
+
+" quick toggle spell checking
+map <silent> <leader>sc :set spell!<CR>
+
+" set default language to Italian
+set spelllang=it_it
