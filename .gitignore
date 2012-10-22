@@ -4,3 +4,5 @@
 *.un~
 
 .vimrc.un~
+
+*.swp

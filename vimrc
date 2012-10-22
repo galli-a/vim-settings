@@ -176,7 +176,7 @@ set incsearch
 set showmatch
 set hlsearch
 " clear search result highlight
-nnoremap <leader><space> :noh<CR>
+nnoremap <leader><space> :nohlsearch<CR>
 
 " show invisible characters
 " Shortcut to rapidly toggle `set list`
@@ -265,5 +265,5 @@ set formatprg=par\ -w80rgeq
 " quick toggle spell checking
 map <silent> <leader>sc :set spell!<CR>
 
-" set default language to Italian
-set spelllang=it_it
+" set default language to Italian, with English as second language
+set spelllang=it,en_us
