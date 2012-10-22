@@ -131,7 +131,7 @@ let mapleader="\\"
 " quick edit .vimrc
 nmap <silent> <Leader>se :e $MYVIMRC<CR>
 " quick reload .vimrc
-nmap <silent> <Leader>sv :source $MYVIMRC<CR>
+nmap <silent> <Leader>sv :source $MYVIMRC<CR>:noh<CR>
 " quick edit full configuration file
 nmap <silent> <Leader>ss :e $HOME/vim-settings/vimrc<CR>
 
