@@ -37,7 +37,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'galli-a/my_powerline_theme'
-
+Bundle 'kien/ctrlp.vim'
 " vim-script repos
 
 " non github repos
@@ -267,3 +267,6 @@ map <silent> <leader>sc :set spell!<CR>
 
 " set default language to Italian, with English as second language
 set spelllang=it,en_us
+
+" change map for ctrlP package
+let g:ctrlp_map = '<c-a>'
