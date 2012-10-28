@@ -38,6 +38,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'galli-a/my_powerline_theme'
 Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/hexHighlight.vim'
 " vim-script repos
 
 " non github repos
