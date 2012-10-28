@@ -39,6 +39,7 @@ Bundle 'vim-scripts/scratch.vim'
 Bundle 'galli-a/my_powerline_theme'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/hexHighlight.vim'
+Bundle 'tpope/vim-unimpaired'
 " vim-script repos
 
 " non github repos
@@ -280,3 +281,14 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" change behavior of gV to take into account cut and pasted text
+nmap gV `[v`]
+
+" Bubble text movements
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
