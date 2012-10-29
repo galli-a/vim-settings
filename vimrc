@@ -40,6 +40,7 @@ Bundle 'galli-a/my_powerline_theme'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/hexHighlight.vim'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/kwbdi.vim'
 " vim-script repos
 
 " non github repos
@@ -291,4 +292,4 @@ nmap <C-Up> [e
 nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
-vmap <C-Down> ]egv
+	vmap <C-Down> ]egv
