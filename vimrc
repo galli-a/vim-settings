@@ -67,6 +67,11 @@ set modelines=0
 " wrap lines, only at word boundaries
 set wrap
 set linebreak
+" move vertically by screen line instead of real lines
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " load solarized color scheme
 " set dark background
