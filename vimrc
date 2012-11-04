@@ -113,7 +113,7 @@ end
 set laststatus=2
 
 " powerline settings
-let g:Powerline_theme="skwp_mio"
+let g:Powerline_theme="mio_tema"
 let g:Powerline_colorscheme="solarized256"
 let g:Powerline_symbols='fancy'
 
