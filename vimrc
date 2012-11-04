@@ -42,6 +42,7 @@ Bundle 'vim-scripts/hexHighlight.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-fugitive'
 " vim-script repos
 
 " non github repos
@@ -113,7 +114,7 @@ set laststatus=2
 
 " powerline settings
 let g:Powerline_theme="skwp_mio"
-let g:Powerline_colorscheme="skwp"
+let g:Powerline_colorscheme="solarized256"
 let g:Powerline_symbols='fancy'
 
 " set minimum number of visible lines above and below the cursos
