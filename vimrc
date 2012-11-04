@@ -1,4 +1,4 @@
-" prevent vi compatibility mode 
+" prevent vi compatibility mode  
 set nocompatible
 
 " set encoding to UTF-8
