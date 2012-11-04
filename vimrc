@@ -86,6 +86,8 @@ endif
 syntax enable
 " use transparent background if necessary
 let g:solarized_termtrans = 1
+" set diffmode
+let g:solarized_diffmode = "high"
 " load color scheme
 colorscheme solarized
 " bind F5 to toggle background color
