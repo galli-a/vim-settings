@@ -304,7 +304,7 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 " quickly regenerate tags list
-nnoremap <F12> :!ctags -R<CR>
+nnoremap <F2> :!ctags -R<CR>
 
 " set window size at startup
 if has("gui_running")
