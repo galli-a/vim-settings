@@ -282,7 +282,7 @@ map <silent> <leader>sc :set spell!<CR>
 set spelllang=it,en_us
 
 " change map for ctrlP package
-let g:ctrlp_map = '<c-a>'
+let g:ctrlp_map = '<c-F1>'
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
