@@ -43,6 +43,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
 " vim-script repos
 
 " non github repos
