@@ -45,6 +45,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/taglist.vim'
 " vim-script repos
 
 " non github repos
@@ -337,3 +338,8 @@ autocmd User fugitive
 
 " auto-clean fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" quick toggle TagList
+nnoremap <C-F3> :TlistToggle<CR>
+" put Taglist window on the right
+let Tlist_Use_Right_Window=1
