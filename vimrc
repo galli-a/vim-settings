@@ -313,6 +313,7 @@ if has("gui_running")
   set lines=35 columns=140
 endif
 
+" quickly call tabularize plugin on visual selection
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
@@ -325,3 +326,12 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+" go up a level in fugutive tree representation
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+" auto-clean fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
