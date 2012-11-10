@@ -44,6 +44,7 @@ Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
+Bundle 'scrooloose/nerdcommenter'
 " vim-script repos
 
 " non github repos
