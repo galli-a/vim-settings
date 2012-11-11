@@ -46,6 +46,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/DirDiff.vim'
 " vim-script repos
 
 " non github repos
