@@ -50,6 +50,7 @@ Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'voithos/vim-python-matchit'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'michaeljsmith/vim-indent-object'
 " vim-script repos
 
 " non github repos
