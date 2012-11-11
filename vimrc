@@ -47,6 +47,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DirDiff.vim'
+Bundle 'vim-scripts/matchit.zip'
 " vim-script repos
 
 " non github repos
