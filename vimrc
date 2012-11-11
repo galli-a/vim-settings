@@ -48,6 +48,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'voithos/vim-python-matchit'
 " vim-script repos
 
 " non github repos
