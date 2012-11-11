@@ -290,7 +290,7 @@ map <silent> <leader>sc :set spell!<CR>
 set spelllang=it,en_us
 
 " change map for ctrlP package
-let g:ctrlp_map = '<F7>'
+let g:ctrlp_map = "<F7>"
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-h> :call <SID>SynStack()<CR>
@@ -346,6 +346,6 @@ autocmd User fugitive
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " quick toggle TagList
-nnoremap <C-F3> :TlistToggle<CR>
+nnoremap <C-S-F3> :TlistToggle<CR>
 " put Taglist window on the right
 let Tlist_Use_Right_Window=1
