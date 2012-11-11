@@ -49,6 +49,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'voithos/vim-python-matchit'
+Bundle 'vim-scripts/bufexplorer.zip'
 " vim-script repos
 
 " non github repos
