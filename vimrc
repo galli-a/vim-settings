@@ -59,7 +59,8 @@ endif
 
 filetype plugin indent on
 
-
+" add window title
+set title
 
 " allow hidden buffers
 set hidden
