@@ -53,6 +53,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/Rainbow-Parentheses-Improved'
 
 " non github repos
 if iCanHazVundle == 0
