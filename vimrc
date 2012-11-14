@@ -41,6 +41,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'gregsexton/gitv'
 Bundle 'voithos/vim-python-matchit'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'amdt/sunset'
 Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
@@ -349,3 +350,24 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 nnoremap <C-S-F3> :TlistToggle<CR>
 " put Taglist window on the right
 let Tlist_Use_Right_Window=1
+
+" sunset configuration
+let g:sunset_latitude = 45.66
+let g:sunset_longitude = 8.73
+let g:sunset_utc_offset = 1 " no DST
+" let g:sunset_utc_offset = 2 " DST
+let g:loaded_sunset = 1 " disable plugin
+function! g:sunset_daytime_callback()
+	if exists(':PowerlineReloadColorscheme')
+		let g:Powerline_colorscheme = 'solarized'
+		PowerlineReloadColorscheme
+	endif
+	set background=light
+endfunction
+function! g:sunset_nighttime_callback()
+	if exists(':PowerlineReloadColorscheme')
+		let g:Powerline_colorscheme = 'solarized256'
+		PowerlineReloadColorscheme
+	endif
+	set background=dark
+endfunction
