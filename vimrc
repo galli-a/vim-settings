@@ -88,7 +88,7 @@ vnoremap k gk
 
 " load solarized color scheme
 " set dark background
-if has('gui_running')
+if has("gui_running")
 	set background=dark
 else
 	set background=dark
@@ -102,7 +102,7 @@ let g:solarized_diffmode = "high"
 " load color scheme
 colorscheme solarized
 " bind F5 to toggle background color
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 " set font
 if has("unix")
@@ -128,7 +128,7 @@ set laststatus=2
 " powerline settings
 let g:Powerline_theme="mio_tema"
 let g:Powerline_colorscheme="solarized256"
-let g:Powerline_symbols='fancy'
+let g:Powerline_symbols="fancy"
 
 " set minimum number of visible lines above and below the cursos
 set scrolloff=3
@@ -359,16 +359,27 @@ let g:sunset_utc_offset = 1 " no DST
 " let g:sunset_utc_offset = 2 " DST
 let g:loaded_sunset = 1 " disable plugin
 function! g:sunset_daytime_callback()
-	if exists(':PowerlineReloadColorscheme')
-		let g:Powerline_colorscheme = 'solarized'
+	if exists(":PowerlineReloadColorscheme")
+		let g:Powerline_colorscheme = "solarized"
 		PowerlineReloadColorscheme
 	endif
 	set background=light
 endfunction
 function! g:sunset_nighttime_callback()
-	if exists(':PowerlineReloadColorscheme')
-		let g:Powerline_colorscheme = 'solarized256'
+	if exists(":PowerlineReloadColorscheme")
+		let g:Powerline_colorscheme = "solarized256"
 		PowerlineReloadColorscheme
 	endif
 	set background=dark
 endfunction
+" function to quickly call the sunset callbacks
+function! g:toggle_sunset()
+	if &background=="dark"
+		call g:sunset_daytime_callback()
+	else
+		call g:sunset_nighttime_callback()
+	endif
+endfunction
+" map <F5> to toggle sunset settings
+map <silent> <F5> :call g:toggle_sunset()<CR>
+map! <silent> <F5> <C-O>:call g:toggle_sunset()<CR>
