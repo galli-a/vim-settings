@@ -88,11 +88,11 @@ vnoremap k gk
 
 " load solarized color scheme
 " set dark background
-"if has("gui_running")
-	"set background=dark
-"else
-	"set background=dark
-"endif
+if has("gui_running")
+	set background=dark
+else
+	set background=dark
+endif
 " enable syntax
 syntax enable
 " use transparent background if necessary
@@ -357,11 +357,12 @@ let g:sunset_latitude = 45.66
 let g:sunset_longitude = 8.73
 let g:sunset_utc_offset = 1 " no DST
 " let g:sunset_utc_offset = 2 " DST
-"let g:loaded_sunset = 1 " disable plugin
+let g:loaded_sunset = 1 " disable plugin
 function! g:sunset_daytime_callback()
 	if exists(":PowerlineReloadColorscheme")
 		let g:Powerline_colorscheme = "solarized"
 		PowerlineReloadColorscheme
+		":source $MYVIMRC<CR>:noh<CR>
 	endif
 	set background=light
 endfunction
@@ -369,6 +370,7 @@ function! g:sunset_nighttime_callback()
 	if exists(":PowerlineReloadColorscheme")
 		let g:Powerline_colorscheme = "solarized256"
 		PowerlineReloadColorscheme
+		":source $MYVIMRC<CR>:noh<CR>
 	endif
 	set background=dark
 endfunction
