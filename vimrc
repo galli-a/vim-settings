@@ -385,3 +385,6 @@ endfunction
 " map <F5> to toggle sunset settings
 map <silent> <F5> :call g:toggle_sunset()<CR>
 map! <silent> <F5> <C-O>:call g:toggle_sunset()<CR>
+
+" map <F3> to backtick
+noremap <F3> <Char-0x60>
