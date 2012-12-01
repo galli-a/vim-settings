@@ -42,6 +42,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'voithos/vim-python-matchit'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'amdt/sunset'
+Bundle 'krisajenkins/vim-projectlocal'
 Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
