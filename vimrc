@@ -254,26 +254,26 @@ inoremap <silent> <F4> <ESC>:YRShow<cr>
 " let g:netrw_winsize=30 " limit preview window to 80%
 " let g:netrw_altv=1
 " 
-" " Toggle Vexplore with Ctrl-E
-" function! ToggleVExplorer()
-"   if exists("t:expl_buf_num")
-"       let expl_win_num = bufwinnr(t:expl_buf_num)
-"       if expl_win_num != -1
-"           let cur_win_nr = winnr()
-"           exec expl_win_num . 'wincmd w'
-"           close
-"           exec cur_win_nr . 'wincmd w'
-"           unlet t:expl_buf_num
-"       else
-"           unlet t:expl_buf_num
-"       endif
-"   else
-"       exec '1wincmd w'
-"       Vexplore
-"       let t:expl_buf_num = bufnr("%")
-"   endif
-" endfunction
-" map <silent> <C-E> :call ToggleVExplorer()<CR>
+"" Toggle Vexplore with Ctrl-E
+"function! ToggleVExplorer()
+	"if exists("t:expl_buf_num")
+		"let expl_win_num = bufwinnr(t:expl_buf_num)
+		"if expl_win_num != -1
+			"let cur_win_nr = winnr()
+			"exec expl_win_num . 'wincmd w'
+			"close
+			"exec cur_win_nr . 'wincmd w'
+			"unlet t:expl_buf_num
+		"else
+			"unlet t:expl_buf_num
+		"endif
+	"else
+		"exec '1wincmd w'
+		"Vexplore
+		"let t:expl_buf_num = bufnr("%")
+	"endif
+"endfunction
+"map <silent> <C-E> :call ToggleVExplorer()<CR>
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -390,3 +390,9 @@ map! <silent> <F5> <C-O>:call g:toggle_sunset()<CR>
 " map <F8> to backtick
 noremap <F8> <Char-0x60>
 inoremap <F8> <Char-0x60>
+
+" folding settings
+set foldmethod=indent
+set nofoldenable
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
