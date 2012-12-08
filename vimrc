@@ -393,6 +393,7 @@ inoremap <F8> <Char-0x60>
 
 " folding settings
 set foldmethod=indent
+set foldcolumn=4
 set nofoldenable
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
