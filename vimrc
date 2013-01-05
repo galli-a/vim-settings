@@ -395,3 +395,6 @@ inoremap <F8> <Char-0x60>
 set foldmethod=indent
 set foldcolumn=4
 set nofoldenable
+
+" link unnamed register to system clipboard
+set clipboard=unnamed
