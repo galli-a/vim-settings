@@ -55,6 +55,7 @@ Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/Rainbow-Parentheses-Improved-and2'
+Bundle 'vim-scripts/Figlet.vim'
 
 " non github repos
 if iCanHazVundle == 0
@@ -433,3 +434,6 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+" options for the Figlet plugin
+let g:figletFont='slant'
