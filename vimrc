@@ -437,3 +437,16 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " options for the Figlet plugin
 let g:figletFont='slant'
+
+" add additional text objects to use as delimiters
+let pairs = [ ".", ":", "<bar>", "/", "<bslash>", "*" , "_"]
+for key in pairs
+	execute "nnoremap ci".key." T".key."ct".key
+	execute "nnoremap di".key." T".key."dt".key
+	execute "nnoremap yi".key." T".key."yt".key
+	execute "nnoremap vi".key." T".key."vt".key
+	execute "nnoremap ca".key." F".key."cf".key
+	execute "nnoremap da".key." F".key."df".key
+	execute "nnoremap ya".key." F".key."yf".key
+	execute "nnoremap va".key." F".key."vf".key
+endfor
