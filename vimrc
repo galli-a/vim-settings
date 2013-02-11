@@ -401,7 +401,7 @@ set nofoldenable
 nnoremap <space> za
 
 " link unnamed register to system clipboard
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " function to redirect to a variable or a register the output of a command
 "
