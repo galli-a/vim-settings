@@ -453,3 +453,16 @@ for key in pairs
 	execute "nnoremap ya".key." F".key."yf".key
 	execute "nnoremap va".key." F".key."vf".key
 endfor
+
+" Syntastic
+if has("unix")
+	let g:syntastic_error_symbol = '✗✗'
+	let g:syntastic_style_error_symbol = '✠✠'
+	let g:syntastic_warning_symbol = '∆∆'
+	let g:syntastic_style_warning_symbol = '≈≈'
+else
+	let g:syntastic_error_symbol = 'XX'
+	let g:syntastic_style_error_symbol = 'oo'
+	let g:syntastic_warning_symbol = '∆∆'
+	let g:syntastic_style_warning_symbol = '≈≈'
+end
