@@ -46,6 +46,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'amdt/sunset'
 Bundle 'krisajenkins/vim-projectlocal'
 Bundle 'roman/golden-ratio'
+Bundle 'ervandew/supertab'
 Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
@@ -467,3 +468,6 @@ else
 	let g:syntastic_warning_symbol = '∆∆'
 	let g:syntastic_style_warning_symbol = '≈≈'
 end
+
+" supertab
+let g:SuperTabDefaultCompletionType = "context"
