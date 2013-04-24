@@ -49,6 +49,7 @@ Bundle 'krisajenkins/vim-projectlocal'
 Bundle 'roman/golden-ratio'
 Bundle 'ervandew/supertab'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'finbarrocallaghan/highlights.vim'
 Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
