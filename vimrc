@@ -235,7 +235,7 @@ inoremap <right> <nop>
 set autoread
 
 " save on lost focus
-au FocusLost * :wa
+"au FocusLost * :wa
 
 " quick access to gundo
 nnoremap <F6> :GundoToggle<CR>
