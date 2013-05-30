@@ -50,6 +50,7 @@ Bundle 'roman/golden-ratio'
 Bundle 'ervandew/supertab'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'finbarrocallaghan/highlights.vim'
+Bundle 'dhruvasagar/vim-table-mode.git'
 Bundle 'galli-a/my_powerline_theme'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
@@ -334,19 +335,19 @@ if has("gui_running")
   set lines=35 columns=140
 endif
 
-" quickly call tabularize plugin on visual selection
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+"" quickly call tabularize plugin on visual selection
+"inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction
+"function! s:align()
+  "let p = '^\s*|\s.*\s|\s*$'
+  "if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    "let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    "let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    "Tabularize/|/l1
+    "normal! 0
+    "call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  "endif
+"endfunction
 
 " go up a level in fugutive tree representation
 autocmd User fugitive
