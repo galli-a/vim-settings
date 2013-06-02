@@ -477,3 +477,6 @@ end
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
+
+" use two spaces between sentences
+set cpoptions+=J
