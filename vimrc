@@ -481,3 +481,6 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " use two spaces between sentences
 set cpoptions+=J
+
+" suppress LustyExplorer ruby warning for sysytems without ruby support
+let g:LustyExplorerSuppressRubyWarning = 1
