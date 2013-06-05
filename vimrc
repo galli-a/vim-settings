@@ -486,4 +486,4 @@ set cpoptions+=J
 let g:LustyExplorerSuppressRubyWarning = 1
 
 " quickly toggle between absolute and relative line numbers
-nnoremap <silent> <S-F3> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+nnoremap <silent> <S-F4> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
