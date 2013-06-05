@@ -484,3 +484,6 @@ set cpoptions+=J
 
 " suppress LustyExplorer ruby warning for sysytems without ruby support
 let g:LustyExplorerSuppressRubyWarning = 1
+
+" quickly toggle between absolute and relative line numbers
+nnoremap <silent> <S-F3> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
