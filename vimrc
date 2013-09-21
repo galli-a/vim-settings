@@ -29,7 +29,6 @@ Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
@@ -54,7 +53,6 @@ Bundle 'dhruvasagar/vim-table-mode.git'
 Bundle 'sjbach/lusty.git'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
-"Bundle 'galli-a/my_powerline_theme'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 " vim-script repos
@@ -139,11 +137,6 @@ end
 
 " always show the status line
 set laststatus=2
-
-"" powerline settings
-"let g:Powerline_theme="mio_tema"
-"let g:Powerline_colorscheme="solarized256"
-"let g:Powerline_symbols="fancy"
 
 " make airline use powerline fonts
 let g:airline_powerline_fonts = 1
