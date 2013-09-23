@@ -121,7 +121,7 @@ colorscheme solarized
 if has("unix")
 	set guifont=Inconsolata-dz\ for\ Powerline:h12
 else
-	set guifont=Consolas\ for\ Powerline\ FixedD:h12:cANSI
+	set guifont=Sauce\ Code\ Powerline:h12:cANSI
 endif
 
 " make windows transparent
