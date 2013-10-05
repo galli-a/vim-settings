@@ -488,3 +488,7 @@ let g:LustyExplorerSuppressRubyWarning = 1
 
 " quickly toggle between absolute and relative line numbers
 nnoremap <silent> <S-F4> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+
+" Execute current line or current selection as Vim EX commands.
+nnoremap <F9> :exe getline(".")<CR>
+vnoremap <F9> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
