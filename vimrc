@@ -165,6 +165,8 @@ set wildmode=list:longest,full
 
 " set leader key
 let mapleader="\\"
+" set localleader key
+let maplocalleader="_"
 
 " quick edit .vimrc
 nmap <silent> <Leader>se :e $MYVIMRC<CR>
