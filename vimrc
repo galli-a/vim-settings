@@ -53,6 +53,7 @@ Bundle 'dhruvasagar/vim-table-mode.git'
 Bundle 'sjbach/lusty.git'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'chrisbra/csv.vim'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 " vim-script repos
@@ -492,3 +493,10 @@ nnoremap <silent> <S-F4> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 " Execute current line or current selection as Vim EX commands.
 nnoremap <F9> :exe getline(".")<CR>
 vnoremap <F9> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
+
+" automatically rearrange csv file columns on open and save
+aug CSV_Editing
+	au!
+	au BufRead,BufWritePost *.csv :%ArrangeColumn
+	au BufWritePre *.csv :%UnArrangeColumn
+aug end
