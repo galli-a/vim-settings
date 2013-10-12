@@ -503,8 +503,8 @@ vnoremap <F9> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
 " automatically rearrange csv file columns on open and save
 aug CSV_Editing
 	au!
-	au BufRead,BufWritePost *.csv :%ArrangeColumn
-	au BufWritePre *.csv :%UnArrangeColumn
+	au BufRead,BufWritePost *.csv,*.tsv :%ArrangeColumn
+	au BufWritePre *.csv,*.tsv :%UnArrangeColumn
 aug end
 
 " define text objects for markdown headers, (not for visual mode)
