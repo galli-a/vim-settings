@@ -506,3 +506,10 @@ aug CSV_Editing
 	au BufRead,BufWritePost *.csv :%ArrangeColumn
 	au BufWritePre *.csv :%UnArrangeColumn
 aug end
+
+" define text objects for markdown headers, (not for visual mode)
+augroup markdown_headers_text_object
+	autocmd!
+	autocmd Filetype markdown :onoremap ih :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rkvg_"<cr>
+	autocmd Filetype markdown :onoremap ah :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rg_vk0"<cr>
+augroup END
