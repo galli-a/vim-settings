@@ -356,14 +356,18 @@ endif
   "endif
 "endfunction
 
-" go up a level in fugutive tree representation
-autocmd User fugitive
-  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
+" fugitive autocommands
+augroup fugitive_au
+	autocmd!
+	" go up a level in fugitive tree representation
+	autocmd User fugitive
+	  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+	  \   nnoremap <buffer> .. :edit %:h<CR> |
+	  \ endif
 
-" auto-clean fugitive buffers
-autocmd BufReadPost fugitive://* set bufhidden=delete
+	" auto-clean fugitive buffers
+	autocmd BufReadPost fugitive://* set bufhidden=delete
+augroup END
 
 " quick toggle TagList
 nnoremap <C-S-F3> :TlistToggle<CR>
