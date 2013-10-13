@@ -500,16 +500,25 @@ nnoremap <silent> <S-F4> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 nnoremap <F9> :exe getline(".")<CR>
 vnoremap <F9> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
 
-" automatically rearrange csv file columns on open and save
-aug CSV_Editing
-	au!
-	au BufRead,BufWritePost *.csv,*.tsv :%ArrangeColumn
-	au BufWritePre *.csv,*.tsv :%UnArrangeColumn
-aug end
+" automatically rearrange csv file columns on open and save {{{
+augroup CSV_Editing
+	autocmd!
+	autocmd BufRead,BufWritePost *.csv,*.tsv :%ArrangeColumn
+	autocmd BufWritePre *.csv,*.tsv :%UnArrangeColumn
+augroup end
+" }}}
 
-" define text objects for markdown headers, (not for visual mode)
+" define text objects for markdown headers, (not for visual mode) {{{
 augroup markdown_headers_text_object
 	autocmd!
 	autocmd Filetype markdown :onoremap ih :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rkvg_"<cr>
 	autocmd Filetype markdown :onoremap ah :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rg_vk0"<cr>
 augroup END
+" }}}
+
+" set fold method for vimscript files {{{
+augroup vimscript_foldmethod
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
