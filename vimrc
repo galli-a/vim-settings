@@ -462,6 +462,7 @@ map! <silent> <F5> <C-O>:call g:toggle_sunset()<CR>
 " map <F8> to backtick {{{
 noremap <F8> <Char-0x60>
 inoremap <F8> <Char-0x60>
+cnoremap <F8> <Char-0x60>
 " }}}
 
 " folding settings {{{
