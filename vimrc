@@ -311,15 +311,15 @@ inoremap <silent> <F4> <ESC>:YRShow<cr>
 		"let expl_win_num = bufwinnr(t:expl_buf_num)
 		"if expl_win_num != -1
 			"let cur_win_nr = winnr()
-			"exec expl_win_num . 'wincmd w'
+			"execute expl_win_num . 'wincmd w'
 			"close
-			"exec cur_win_nr . 'wincmd w'
+			"execute cur_win_nr . 'wincmd w'
 			"unlet t:expl_buf_num
 		"else
 			"unlet t:expl_buf_num
 		"endif
 	"else
-		"exec '1wincmd w'
+		"execute '1wincmd w'
 		"Vexplore
 		"let t:expl_buf_num = bufnr("%")
 	"endif
@@ -332,7 +332,7 @@ inoremap <silent> <F4> <ESC>:YRShow<cr>
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+  command DiffOrig vertical new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
 " }}}
@@ -478,11 +478,11 @@ nnoremap <space> za
 " Note that since this is executed in function context,
 "   in order to target a global variable for redirection you must prefix it with `g:`.
 " EG call Redir('ls', '=>g:buffer_list')
-funct! Redir(command, to)
-  exec 'redir '.a:to
-  exec a:command
+function! Redir(command, to)
+  execute 'redir '.a:to
+  execute a:command
   redir END
-endfunct
+endfunction
 " The last non-space substring is passed as the redirection target.
 " EG
 "   :R ls @">
@@ -555,13 +555,13 @@ let g:LustyExplorerSuppressRubyWarning = 1
 " set relative line number
 set relativenumber
 " quickly toggle between absolute and relative line numbers
-nnoremap <silent> <S-F4> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+nnoremap <silent> <S-F4> :execute &nu==&rnu? "se nu!" : "se rnu!"<CR>
 " }}}
 
 " Execute current line or current selection as Vim EX commands. {{{
-nnoremap <F9> :exe getline(".")<CR>
-"vnoremap <F9> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
-vnoremap <F9> :<C-w>exe join(getline("'<","'>"),"\n")<CR>
+nnoremap <F9> :execute getline(".")<CR>
+"vnoremap <F9> :<C-w>execute join(getline("'<","'>"),'<Bar>')<CR>
+vnoremap <F9> :<C-w>execute join(getline("'<","'>"),"\n")<CR>
 " }}}
 
 " automatically rearrange csv file columns on open and save {{{
