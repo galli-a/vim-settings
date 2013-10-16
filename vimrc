@@ -151,6 +151,12 @@ if has("win32") || has("win64")
 end
 " }}}
 
+" set external grep program to grep on windows {{{
+if has("win32") || has("win64")
+	set grepprg=grep\ -nH
+end
+" }}}
+
 " status line {{{
 " always show the status line
 set laststatus=2
