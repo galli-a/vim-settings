@@ -57,6 +57,7 @@ Bundle 'sjbach/lusty.git'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'chrisbra/csv.vim'
+Bundle 'justinmk/vim-sneak'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 " vim-script repos
