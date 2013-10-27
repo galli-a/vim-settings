@@ -58,6 +58,7 @@ Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'chrisbra/csv.vim'
 Bundle 'justinmk/vim-sneak'
+Bundle 'arecarn/crunch'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 " vim-script repos
@@ -593,4 +594,9 @@ augroup vimscript_foldmethod
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
+
+" change mappings for crunch {{{
+map <silent> <leader>cr <plug>CrunchCrunchLine
+map <silent> <leader>cx <plug>CrunchCrunchBlock
 " }}}
