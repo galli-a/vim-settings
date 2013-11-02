@@ -614,3 +614,7 @@ map <silent> <leader>cx <plug>CrunchCrunchBlock
 " activate concealing {{{
 set conceallevel=2
 " }}}
+
+" make <C-a> and <C-x> work on only decimal numbers {{{
+set nrformats=
+" }}}
