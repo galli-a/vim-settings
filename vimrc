@@ -122,6 +122,12 @@ else
 endif
 " enable syntax
 syntax enable
+" set use of 256 colors
+let g:solarized_termcolors = 16
+" set visibility high
+"let g:solarized_visibility = "high"
+" set contrast high
+let g:solarized_contrast = "high"
 " use transparent background if necessary
 let g:solarized_termtrans = 1
 " set diffmode
@@ -176,6 +182,10 @@ set ruler
 let g:airline_powerline_fonts = 1
 " enable airline tabline
 let g:airline#extensions#tabline#enabled = 1
+" remove arrowtips
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+let g:airline_theme='solarized'
 " }}}
 " }}}
 
@@ -599,4 +609,8 @@ augroup END
 " change mappings for crunch {{{
 map <silent> <leader>cr <plug>CrunchCrunchLine
 map <silent> <leader>cx <plug>CrunchCrunchBlock
+" }}}
+
+" activate concealing {{{
+set conceallevel=2
 " }}}
