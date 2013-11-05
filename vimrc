@@ -618,3 +618,8 @@ set conceallevel=2
 " make <C-a> and <C-x> work on only decimal numbers {{{
 set nrformats=
 " }}}
+
+" insert timestamp {{{
+nmap <S-F5> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
+imap <S-F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
+" }}}
