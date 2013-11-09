@@ -640,3 +640,7 @@ function! HelpInNewTab()
 	endif
 endfunction
 " }}}
+
+" set virtual edit {{{
+set virtualedit=block
+" }}}
