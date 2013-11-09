@@ -623,3 +623,7 @@ set nrformats=
 nmap <S-F5> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <S-F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 " }}}
+
+" increase history for ex commands {{{
+set history=10000
+" }}}
