@@ -627,3 +627,16 @@ imap <S-F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 " increase history for ex commands {{{
 set history=10000
 " }}}
+
+" make help window appear as new tab {{{
+augroup HelpInTabs
+	autocmd!
+	autocmd BufEnter *.txt call HelpInNewTab()
+augroup END
+
+function! HelpInNewTab()
+	if &buftype == 'help'
+		execute "normal \<C-W>T"
+	endif
+endfunction
+" }}}
