@@ -198,7 +198,7 @@ set scrolloff=3
 set display=lastline
 " }}}
 
-" set automatic indentation {{{
+" set indentation {{{
 set autoindent
 " }}}
 
@@ -644,4 +644,13 @@ endfunction
 
 " set virtual edit {{{
 set virtualedit=block
+" }}}
+
+" set maximum width marker, only on longer lines {{{
+if has("gui_running")
+	highlight ColorColumn guibg=darkred
+else
+	highlight ColorColumn ctermbg=darkred
+end
+call matchadd('ColorColumn', '\%81v', 100)
 " }}}
