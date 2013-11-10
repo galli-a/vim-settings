@@ -61,6 +61,7 @@ Bundle 'justinmk/vim-sneak'
 Bundle 'arecarn/crunch'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
+Bundle 'galli-a/persistentvisuals'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/ZoomWin'
