@@ -654,3 +654,21 @@ else
 end
 call matchadd('ColorColumn', '\%81v', 100)
 " }}}
+
+" highlight the next match in red when using n/N after search {{{
+if has("gui_running")
+	highlight WhiteOnRed guibg=red guifg=white
+else
+	highlight WhiteOnRed ctermbg=red ctermfg=white
+end
+nnoremap <silent> n n:call HLNext(0.4)<CR>
+nnoremap <silent> N N:call HLNext(0.4)<CR>
+function! HLNext(blinktime)
+	let target_pat = '\c\%#'.@/
+	let ring = matchadd('WhiteOnRed', target_pat, 1)
+	redraw
+	exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+	call matchdelete(ring)
+	redraw
+endfunction
+" }}}
