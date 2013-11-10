@@ -1,4 +1,4 @@
-" prevent vi compatibility mode {{{
+﻿" prevent vi compatibility mode {{{
 set nocompatible
 " }}}
 
@@ -272,10 +272,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 if has("unix")
-	set listchars=tab:➟\ ,eol:⤦
+	set listchars=tab:➟\ ,eol:⤦,trail:·
 	set showbreak=…
 else
-	set listchars=tab:→\ ,eol:▼
+	set listchars=tab:→\ ,eol:▼, trail:·
 	set showbreak=…
 end
 " }}}
