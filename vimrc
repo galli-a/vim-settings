@@ -609,8 +609,8 @@ augroup END
 " }}}
 
 " change mappings for crunch {{{
-map <silent> <leader>cr <plug>CrunchCrunchLine
-map <silent> <leader>cx <plug>CrunchCrunchBlock
+map <silent> <leader>cr <plug>CrunchEvalLine
+map <silent> <leader>cx <plug>CrunchEvalBlock
 " }}}
 
 " activate concealing {{{
