@@ -276,7 +276,7 @@ if has("unix")
 	set listchars=tab:➟\ ,eol:⤦,trail:·
 	set showbreak=…
 else
-	set listchars=tab:→\ ,eol:▼, trail:·
+	set listchars=tab:→\ ,eol:▼,trail:·
 	set showbreak=…
 end
 " }}}
