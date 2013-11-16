@@ -63,6 +63,7 @@ Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 Bundle 'galli-a/persistentvisuals'
 Bundle 'galli-a/listtrans'
+Bundle 'galli-a/vmath'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/ZoomWin'
@@ -677,4 +678,9 @@ endfunction
 " listtrans mappings {{{
 nmap <leader>cl :call ListTrans_toggle_format()<CR>
 vmap <leader>cl :call ListTrans_toggle_format('visual')<CR>
+" }}}
+
+" vmath mappings {{{
+vnoremap <expr> ++ VMATH_YankAndAnalyse() 
+nmap ++ vip++
 " }}}
