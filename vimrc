@@ -64,6 +64,7 @@ Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 Bundle 'galli-a/persistentvisuals'
 Bundle 'galli-a/listtrans'
 Bundle 'galli-a/vmath'
+Bundle 'galli-a/dragvisuals'
 " vim-script repos
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/ZoomWin'
@@ -76,6 +77,7 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/bufexplorer.zip'
 "Bundle 'vim-scripts/Rainbow-Parentheses-Improved-and2'
 Bundle 'vim-scripts/Figlet.vim'
+Bundle 'vim-scripts/vis'
 
 " non github repos
 if iCanHazVundle == 0
@@ -291,6 +293,12 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+" except in visual mode
+vmap <expr> <LEFT> DVB_Drag('left')
+vmap <expr> <RIGHT> DVB_Drag('right')
+vmap <expr> <DOWN> DVB_Drag('down')
+vmap <expr> <UP> DVB_Drag('up')
+vmap <expr> D DVB_Duplicate()
 " }}}
 
 " reload modified files {{{
