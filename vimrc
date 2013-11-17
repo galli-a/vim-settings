@@ -692,3 +692,8 @@ vmap <leader>cl :call ListTrans_toggle_format('visual')<CR>
 vnoremap <expr> ++ VMATH_YankAndAnalyse() 
 nmap ++ vip++
 " }}}
+
+" avoid cursor keys for History {{{
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+" }}}
