@@ -700,3 +700,7 @@ nmap ++ vip++
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " }}}
+
+" add quick mapping to current buffer's path in command mode {{{
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" }}}
