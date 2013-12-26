@@ -63,6 +63,7 @@ Bundle 'dahu/LearnVim'
 Bundle 'sk1418/HowMuch'
 Bundle 'bruno-/vim-vertical-move'
 Bundle 'mattn/calendar-vim'
+Bundle 'mhinz/vim-signify'
 Bundle 'galli-a/DirDiff.vim'
 Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 Bundle 'galli-a/persistentvisuals'
@@ -704,4 +705,11 @@ cnoremap <C-n> <Down>
 
 " add quick mapping to current buffer's path in command mode {{{
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" }}}
+
+" settings for signify {{{
+" restrict to only git and mercurial
+let g:signify_vcs_list = [ 'git', 'hg' ]
+let signify_sign_weight = 'none'
+let g:signify_sign_color_inherit_from_linenr = 1
 " }}}
