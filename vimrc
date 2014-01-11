@@ -95,8 +95,8 @@ Bundle 'dahu/LearnVim'
 Bundle 'sk1418/HowMuch' 
 " moves vertically as far as possible without changing column
 Bundle 'bruno-/vim-vertical-move' 
-" creates calendar window
-Bundle 'mattn/calendar-vim' 
+" calendar, able to access GCal
+Bundle 'itchyny/calendar.vim'
 " use signs to indicate modified lines, based on vcs
 Bundle 'mhinz/vim-signify' 
 " recursive diff on two directories
