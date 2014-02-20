@@ -640,8 +640,7 @@ let g:LustyExplorerSuppressRubyWarning = 1
 " line numbering {{{
 " set relative line number
 set relativenumber
-" quickly toggle between absolute and relative line numbers
-nnoremap <silent> <S-F4> :execute &nu==&rnu? "se nu!" : "se rnu!"<CR>
+set number
 " }}}
 
 " Execute current line or current selection as Vim EX commands. {{{
