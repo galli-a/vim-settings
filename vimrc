@@ -99,6 +99,8 @@ Bundle 'bruno-/vim-vertical-move'
 Bundle 'itchyny/calendar.vim'
 " use signs to indicate modified lines, based on vcs
 Bundle 'mhinz/vim-signify' 
+" recursively select and deselect larger text objects
+Bundle 'gcmt/wildfire.vim'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
