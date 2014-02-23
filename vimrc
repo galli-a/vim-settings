@@ -426,6 +426,22 @@ endif
 
 " set paragraph formatting through external command {{{
 set formatprg=par\ -w80rgeq
+" filter html and xml files through pandoc to remove crufty markup
+function! FormatprgLocal(filter)
+  if !empty(v:char)
+    return 1
+  else
+    let l:command = v:lnum.','.(v:lnum+v:count-1).'!'.a:filter
+    echo l:command
+    execute l:command
+  endif
+endfunction
+ 
+if has("autocmd")
+  let pandoc_pipeline  = "pandoc --from=html --to=markdown"
+  let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
+  autocmd FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
+endif
 " }}}
 
 " spell checking {{{
