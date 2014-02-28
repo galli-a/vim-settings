@@ -101,6 +101,8 @@ Bundle 'itchyny/calendar.vim'
 Bundle 'mhinz/vim-signify' 
 " recursively select and deselect larger text objects
 Bundle 'gcmt/wildfire.vim'
+" open excel files for display
+Bundle 'yakiang/excel.vim'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
@@ -780,4 +782,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 let g:signify_vcs_list = [ 'git', 'hg' ]
 let signify_sign_weight = 'none'
 let g:signify_sign_color_inherit_from_linenr = 1
+" }}}
+
+" settings for excel.vim {{{
+let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docx,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx'
 " }}}
