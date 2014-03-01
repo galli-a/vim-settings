@@ -103,6 +103,8 @@ Bundle 'mhinz/vim-signify'
 Bundle 'gcmt/wildfire.vim'
 " open excel files for display
 Bundle 'yakiang/excel.vim'
+" add a Bundle menu
+Bundle 'mbadran/headlights'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
