@@ -105,6 +105,8 @@ Bundle 'gcmt/wildfire.vim'
 Bundle 'yakiang/excel.vim'
 " add a Bundle menu
 Bundle 'mbadran/headlights'
+" swap two text objects
+Bundle 'tommcdo/vim-exchange'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
