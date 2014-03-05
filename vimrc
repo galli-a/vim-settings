@@ -29,8 +29,6 @@ Bundle 'gmarik/vundle'
 " plugin list
 "
 " original repos on github
-" use ack - td
-Bundle 'mileszs/ack.vim' 
 " visualize undo tree
 Bundle 'sjl/gundo.vim' 
 " solarized color scheme
