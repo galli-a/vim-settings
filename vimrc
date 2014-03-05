@@ -128,8 +128,6 @@ Bundle 'vim-scripts/scratch.vim'
 Bundle 'vim-scripts/hexHighlight.vim' 
 " keep window on buffer delete
 Bundle 'vim-scripts/kwbdi.vim' 
-" source code browser, uses ctags
-Bundle 'vim-scripts/taglist.vim' 
 "Bundle 'vim-scripts/DirDiff.vim'
 " extends % to blocks in other programming languages
 Bundle 'vim-scripts/matchit.zip' 
