@@ -11,7 +11,7 @@ set encoding=utf-8
 filetype off
 " Setting up Vundle
 let iCanHazVundle=1
-set shellxquote=""
+" set shellxquote=""
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
 	echo "Installing Vundle..."
