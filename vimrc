@@ -105,6 +105,8 @@ Bundle 'yakiang/excel.vim'
 Bundle 'mbadran/headlights'
 " swap two text objects
 Bundle 'tommcdo/vim-exchange'
+" automatic indent guides
+Bundle 'nathanaelkane/vim-indent-guides'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
