@@ -107,6 +107,8 @@ Bundle 'mbadran/headlights'
 Bundle 'tommcdo/vim-exchange'
 " automatic indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
+" tomorrow theme
+Bundle 'chriskempson/vim-tomorrow-theme'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
