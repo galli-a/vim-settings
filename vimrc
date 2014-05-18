@@ -461,6 +461,7 @@ set spelllang=it,en_us
 " change map for ctrlP package {{{
 let g:ctrlp_map = "<F7>"
 let g:ctrlp_cmd = "CtrlPMixed"
+nnoremap <Leader>t :CtrlPTag<CR>
 " }}}
 
 " Show syntax highlighting groups for word under cursor {{{
