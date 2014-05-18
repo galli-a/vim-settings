@@ -109,6 +109,8 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'nathanaelkane/vim-indent-guides'
 " tomorrow theme
 Bundle 'chriskempson/vim-tomorrow-theme'
+" show marks in gutter
+Bundle 'kshenoy/vim-signature'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
