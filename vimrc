@@ -311,6 +311,10 @@ noremap <leader>yy "*Y
 set backspace=indent,eol,start
 " }}}
 
+" prevent carrying on comments on new lines {{{
+set formatoptions-=or
+" }}}
+
 " Preserve indentation while pasting text from the OS X clipboard {{{
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " }}}
