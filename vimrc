@@ -113,6 +113,8 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'kshenoy/vim-signature'
 " snippet manager
 Bundle 'SirVer/ultisnips'
+" smooth scroll
+Bundle 'terryma/vim-smooth-scroll'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
@@ -804,4 +806,11 @@ let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*
 " tranpose characters as a single command {{{
 nnoremap <silent> <Plug>TransposeCharacters xp :call repeat#set("\<Plug>TransposeCharacters")<CR>
 nmap cp <Plug>TransposeCharacters
+" }}}
+
+" smooth scroll {{{
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 " }}}
