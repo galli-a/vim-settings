@@ -219,7 +219,8 @@ colorscheme solarized
 
 " set font {{{
 if has("unix")
-	set guifont=Inconsolata-dz\ for\ Powerline:h12
+	" set guifont=Inconsolata-dz\ for\ Powerline:h12
+	set guifont=Sauce\ Code\ Powerline:h14
 else
 	set guifont=Sauce\ Code\ Powerline:h12:cANSI
 endif
