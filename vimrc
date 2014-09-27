@@ -221,9 +221,18 @@ colorscheme solarized
 if has("unix")
 	" set guifont=Inconsolata-dz\ for\ Powerline:h12
 	set guifont=Sauce\ Code\ Powerline:h14
+	" set guifont=Cousine\ for\ Powerline:h14
 else
 	set guifont=Sauce\ Code\ Powerline:h12:cANSI
 endif
+" }}}
+
+" set comments in italic {{{
+if has("gui_running")
+	highlight Comment gui=italic
+else
+	highlight Comment cterm=italic
+end
 " }}}
 
 " make windows transparent {{{
