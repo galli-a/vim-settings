@@ -119,6 +119,8 @@ Bundle 'SirVer/ultisnips'
 Bundle 'terryma/vim-smooth-scroll'
 " visually select inreasingly larger regions
 Bundle 'terryma/vim-expand-region'
+" improved incremental search
+Bundle 'haya14busa/incsearch.vim'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
@@ -855,4 +857,21 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 " visually expand region {{{
 map è <Plug>(expand_region_expand)
 map à <Plug>(expand_region_shrink)
+" }}}
+
+" setting for improved incremental search {{{
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" set improved magic option
+let g:incsearch#magic = '\v'
+" " turn off highlight after searching related motions
+" set hlsearch
+" let g:incsearch#auto_nohlsearch = 1
+" map n <Plug>(incsearch-nohl-n)
+" map N <Plug>(incsearch-nohl-N)
+" map * <Plug>(incsearch-nohl-*)
+" map # <Plug>(incsearch-nohl-#)
+" map g* <Plug>(incsearch-nohl-g*)
+" map g# <Plug>(incsearch-nohl-g#)
 " }}}
