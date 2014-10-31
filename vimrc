@@ -121,6 +121,8 @@ Bundle 'terryma/vim-smooth-scroll'
 Bundle 'terryma/vim-expand-region'
 " improved incremental search
 Bundle 'haya14busa/incsearch.vim'
+" manage files and directories
+Bundle 'c0r73x/vimdir.vim'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim' 
 " different color for different levels of nested parentheses
