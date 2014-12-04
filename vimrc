@@ -316,6 +316,8 @@ nmap <silent> <Leader>ss :e $HOME/vim-settings/vimrc<CR>
 
 " highlight current line {{{
 set cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 " }}}
 
 " speed up scrolling {{{
