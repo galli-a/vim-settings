@@ -200,8 +200,10 @@ vnoremap k gk
 " set dark background
 if has("gui_running")
 	set background=dark
+	let g:solarized_termcolors = 256
 else
 	set background=dark
+	let g:solarized_termcolors = 16
 endif
 " enable syntax
 syntax enable
