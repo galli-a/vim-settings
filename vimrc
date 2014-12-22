@@ -30,75 +30,75 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 " visualize undo tree
-Bundle 'sjl/gundo.vim' 
+Bundle 'sjl/gundo.vim'
 " solarized color scheme
-Bundle 'altercation/vim-colors-solarized' 
+Bundle 'altercation/vim-colors-solarized'
 " add surround action
-Bundle 'tpope/vim-surround' 
+Bundle 'tpope/vim-surround'
 " enables repeat for plugin maps
-Bundle 'tpope/vim-repeat' 
+Bundle 'tpope/vim-repeat'
 " handy brackets mappings - td
-Bundle 'tpope/vim-unimpaired' 
+Bundle 'tpope/vim-unimpaired'
 " git wrapper
-Bundle 'tpope/vim-fugitive' 
+Bundle 'tpope/vim-fugitive'
 " easily define abbreviation and substitutions, including case variants
-Bundle 'tpope/vim-abolish.git' 
+Bundle 'tpope/vim-abolish.git'
 " unicode character metadata
-Bundle 'tpope/vim-characterize' 
+Bundle 'tpope/vim-characterize'
 " toggle comments
-Bundle 'tpope/vim-commentary' 
+Bundle 'tpope/vim-commentary'
 " filesystem explorer
-Bundle 'scrooloose/nerdtree' 
+Bundle 'scrooloose/nerdtree'
 " display results from external syntax checker
-Bundle 'scrooloose/syntastic' 
+Bundle 'scrooloose/syntastic'
 " fuzzy file and buffer finder
-Bundle 'kien/ctrlp.vim' 
+Bundle 'kien/ctrlp.vim'
 " alternative matcher for CtrlP
-Bundle 'FelikZ/ctrlp-py-matcher' 
+Bundle 'FelikZ/ctrlp-py-matcher'
 " align text with regex
-Bundle 'godlygeek/tabular' 
+Bundle 'godlygeek/tabular'
 " shows git repository history
-Bundle 'gregsexton/gitv' 
+Bundle 'gregsexton/gitv'
 " makes % cycle through python block definitions
-Bundle 'voithos/vim-python-matchit' 
+Bundle 'voithos/vim-python-matchit'
 " defines text object representing lines of code at the same indentation level
-Bundle 'michaeljsmith/vim-indent-object' 
+Bundle 'michaeljsmith/vim-indent-object'
 " automatically changes backroung based on sunrise/sunset
-Bundle 'amdt/sunset' 
+Bundle 'amdt/sunset'
 " lets you set up project-specific .vimrc files
-Bundle 'krisajenkins/vim-projectlocal' 
+Bundle 'krisajenkins/vim-projectlocal'
 " resizes focussed window to increase readability
-Bundle 'roman/golden-ratio' 
+Bundle 'roman/golden-ratio'
 " allows use ot <Tab> for all completion
-Bundle 'ervandew/supertab' 
+Bundle 'ervandew/supertab'
 " use * also in visual mode
-Bundle 'nelstrom/vim-visual-star-search' 
+Bundle 'nelstrom/vim-visual-star-search'
 " adds additional highlighting groups - td
-Bundle 'finbarrocallaghan/highlights.vim' 
+Bundle 'finbarrocallaghan/highlights.vim'
 " automatic table creator and formatter
-Bundle 'dhruvasagar/vim-table-mode.git' 
+Bundle 'dhruvasagar/vim-table-mode.git'
 " file and buffer explorer - td
-Bundle 'sjbach/lusty.git' 
+Bundle 'sjbach/lusty.git'
 " statusbar replacement
-Bundle 'bling/vim-airline' 
+Bundle 'bling/vim-airline'
 " allows navigating between vim and tmux splits
-Bundle 'christoomey/vim-tmux-navigator' 
+Bundle 'christoomey/vim-tmux-navigator'
 " better viewing of csv files
-Bundle 'chrisbra/csv.vim' 
+Bundle 'chrisbra/csv.vim'
 " move to location specified by two characters
-Bundle 'justinmk/vim-sneak' 
+Bundle 'justinmk/vim-sneak'
 " easier calculations
-Bundle 'arecarn/crunch' 
+Bundle 'arecarn/crunch'
 " help for learning vim
-Bundle 'dahu/LearnVim' 
+Bundle 'dahu/LearnVim'
 " calculate visually selected expressions
-Bundle 'sk1418/HowMuch' 
+Bundle 'sk1418/HowMuch'
 " moves vertically as far as possible without changing column
-Bundle 'bruno-/vim-vertical-move' 
+Bundle 'bruno-/vim-vertical-move'
 " calendar, able to access GCal
 Bundle 'itchyny/calendar.vim'
 " use signs to indicate modified lines, based on vcs
-Bundle 'mhinz/vim-signify' 
+Bundle 'mhinz/vim-signify'
 " recursively select and deselect larger text objects
 Bundle 'gcmt/wildfire.vim'
 " open excel files for display
@@ -124,38 +124,38 @@ Bundle 'haya14busa/incsearch.vim'
 " manage files and directories
 Bundle 'c0r73x/vimdir.vim'
 " recursive diff on two directories
-Bundle 'galli-a/DirDiff.vim' 
+Bundle 'galli-a/DirDiff.vim'
 " different color for different levels of nested parentheses
-Bundle 'galli-a/Rainbow-Parentheses-Improved-and2' 
+Bundle 'galli-a/Rainbow-Parentheses-Improved-and2'
 " retain visual selection after certain operations
-Bundle 'galli-a/persistentvisuals' 
+Bundle 'galli-a/persistentvisuals'
 " toggles between a comma separated list of words and a bulleted list
-Bundle 'galli-a/listtrans' 
+Bundle 'galli-a/listtrans'
 " math operations on a column of numbers
-Bundle 'galli-a/vmath' 
+Bundle 'galli-a/vmath'
 " allows dragging of visual blocks
-Bundle 'galli-a/dragvisuals' 
+Bundle 'galli-a/dragvisuals'
 " vim-script repos
 " maintains list of previous yanks, changes and deletes
-Bundle 'vim-scripts/YankRing.vim' 
+Bundle 'vim-scripts/YankRing.vim'
 " toggles between split and fullscreen window
-Bundle 'vim-scripts/ZoomWin' 
+Bundle 'vim-scripts/ZoomWin'
 " create and use scratch buffer - td
-Bundle 'vim-scripts/scratch.vim' 
+Bundle 'vim-scripts/scratch.vim'
 " highlights hex codes with their color
-Bundle 'vim-scripts/hexHighlight.vim' 
+Bundle 'vim-scripts/hexHighlight.vim'
 " keep window on buffer delete
-Bundle 'vim-scripts/kwbdi.vim' 
+Bundle 'vim-scripts/kwbdi.vim'
 "Bundle 'vim-scripts/DirDiff.vim'
 " extends % to blocks in other programming languages
-Bundle 'vim-scripts/matchit.zip' 
+Bundle 'vim-scripts/matchit.zip'
 " easier buffer navigation
-Bundle 'vim-scripts/bufexplorer.zip' 
+Bundle 'vim-scripts/bufexplorer.zip'
 "Bundle 'vim-scripts/Rainbow-Parentheses-Improved-and2'
 " use figlet inside vim
-Bundle 'vim-scripts/Figlet.vim' 
+Bundle 'vim-scripts/Figlet.vim'
 " performs Ex commands only on visually selected region
-Bundle 'vim-scripts/vis' 
+Bundle 'vim-scripts/vis'
 
 " non github repos
 if iCanHazVundle == 0
@@ -177,7 +177,7 @@ set hidden
 " }}}
 
 " Explicitly tell vim that the terminal supports 256 colors {{{
-set t_Co=256 
+set t_Co=256
 " }}}
 
 " ??? {{{
@@ -821,7 +821,7 @@ vmap <leader>cl :call ListTrans_toggle_format('visual')<CR>
 " }}}
 
 " vmath mappings {{{
-vnoremap <expr> ++ VMATH_YankAndAnalyse() 
+vnoremap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
 " }}}
 
