@@ -731,150 +731,150 @@ augroup CSV_Editing
 	autocmd!
 	autocmd BufRead,BufWritePost *.csv,*.tsv :%ArrangeColumn
 	autocmd BufWritePre *.csv,*.tsv :%UnArrangeColumn
-	augroup end
-		" }}}
+augroup end
+" }}}
 
-		" define text objects for markdown headers, (not for visual mode) {{{
-		augroup markdown_headers_text_object
-			autocmd!
-			autocmd Filetype markdown :onoremap ih :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rkvg_"<cr>
-			autocmd Filetype markdown :onoremap ah :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rg_vk0"<cr>
-		augroup END
-		" }}}
+" define text objects for markdown headers, (not for visual mode) {{{
+augroup markdown_headers_text_object
+	autocmd!
+	autocmd Filetype markdown :onoremap ih :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rkvg_"<cr>
+	autocmd Filetype markdown :onoremap ah :<c-u>execute "normal! ?^\\(=\\<bar>-\\)\\{2,}$\r:nohlsearch\rg_vk0"<cr>
+augroup END
+" }}}
 
-		" set fold method for vimscript files {{{
-		augroup vimscript_foldmethod
-			autocmd!
-			autocmd FileType vim setlocal foldmethod=marker
-		augroup END
-		" }}}
+" set fold method for vimscript files {{{
+augroup vimscript_foldmethod
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
 
-		" change mappings for crunch {{{
-		map <silent> <leader>cr <plug>CrunchEvalLine
-		map <silent> <leader>cx <plug>CrunchEvalBlock
-		" }}}
+" change mappings for crunch {{{
+map <silent> <leader>cr <plug>CrunchEvalLine
+map <silent> <leader>cx <plug>CrunchEvalBlock
+" }}}
 
-		" activate concealing {{{
-		set conceallevel=2
-		" }}}
+" activate concealing {{{
+set conceallevel=2
+" }}}
 
-		" make <C-a> and <C-x> work on only decimal numbers {{{
-		set nrformats=
-		" }}}
+" make <C-a> and <C-x> work on only decimal numbers {{{
+set nrformats=
+" }}}
 
-		" insert timestamp {{{
-		nmap <S-F5> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
-		imap <S-F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
-		" }}}
+" insert timestamp {{{
+nmap <S-F5> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
+imap <S-F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
+" }}}
 
-		" increase history for ex commands {{{
-		set history=10000
-		" }}}
+" increase history for ex commands {{{
+set history=10000
+" }}}
 
-		" make help window appear as new tab {{{
-		augroup HelpInTabs
-			autocmd!
-			autocmd BufEnter *.txt call HelpInNewTab()
-		augroup END
+" make help window appear as new tab {{{
+augroup HelpInTabs
+	autocmd!
+	autocmd BufEnter *.txt call HelpInNewTab()
+augroup END
 
-		function! HelpInNewTab()
-			if &buftype == 'help'
-				execute "normal \<C-W>T"
-			endif
-		endfunction
-		" }}}
+function! HelpInNewTab()
+	if &buftype == 'help'
+		execute "normal \<C-W>T"
+	endif
+endfunction
+" }}}
 
-		" set virtual edit {{{
-		set virtualedit=block
-		" }}}
+" set virtual edit {{{
+set virtualedit=block
+" }}}
 
-		" set maximum width marker, only on longer lines {{{
-		if has("gui_running")
-			highlight ColorColumn guibg=darkred
-		else
-			highlight ColorColumn ctermbg=darkred
-		end
-		call matchadd('ColorColumn', '\%81v', 100)
-		" }}}
+" set maximum width marker, only on longer lines {{{
+if has("gui_running")
+	highlight ColorColumn guibg=darkred
+else
+	highlight ColorColumn ctermbg=darkred
+end
+call matchadd('ColorColumn', '\%81v', 100)
+" }}}
 
-		" highlight the next match in red when using n/N after search {{{
-		if has("gui_running")
-			highlight WhiteOnRed guibg=red guifg=white
-		else
-			highlight WhiteOnRed ctermbg=red ctermfg=white
-		end
-		nnoremap <silent> n n:call HLNext(0.4)<CR>
-		nnoremap <silent> N N:call HLNext(0.4)<CR>
-		function! HLNext(blinktime)
-			let target_pat = '\c\%#'.@/
-			let ring = matchadd('WhiteOnRed', target_pat, 1)
-			redraw
-			exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-			call matchdelete(ring)
-			redraw
-		endfunction
-		" }}}
+" highlight the next match in red when using n/N after search {{{
+if has("gui_running")
+	highlight WhiteOnRed guibg=red guifg=white
+else
+	highlight WhiteOnRed ctermbg=red ctermfg=white
+end
+nnoremap <silent> n n:call HLNext(0.4)<CR>
+nnoremap <silent> N N:call HLNext(0.4)<CR>
+function! HLNext(blinktime)
+	let target_pat = '\c\%#'.@/
+	let ring = matchadd('WhiteOnRed', target_pat, 1)
+	redraw
+	exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+	call matchdelete(ring)
+	redraw
+endfunction
+" }}}
 
-		" listtrans mappings {{{
-		nmap <leader>cl :call ListTrans_toggle_format()<CR>
-		vmap <leader>cl :call ListTrans_toggle_format('visual')<CR>
-		" }}}
+" listtrans mappings {{{
+nmap <leader>cl :call ListTrans_toggle_format()<CR>
+vmap <leader>cl :call ListTrans_toggle_format('visual')<CR>
+" }}}
 
-		" vmath mappings {{{
-		vnoremap <expr> ++ VMATH_YankAndAnalyse() 
-		nmap ++ vip++
-		" }}}
+" vmath mappings {{{
+vnoremap <expr> ++ VMATH_YankAndAnalyse() 
+nmap ++ vip++
+" }}}
 
-		" avoid cursor keys for History {{{
-		cnoremap <C-p> <Up>
-		cnoremap <C-n> <Down>
-		" }}}
+" avoid cursor keys for History {{{
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+" }}}
 
-		" add quick mapping to current buffer's path in command mode {{{
-		cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-		" }}}
+" add quick mapping to current buffer's path in command mode {{{
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" }}}
 
-		" settings for signify {{{
-		" restrict to only git and mercurial
-		let g:signify_vcs_list = [ 'git', 'hg' ]
-		let signify_sign_weight = 'none'
-		let g:signify_sign_color_inherit_from_linenr = 1
-		" }}}
+" settings for signify {{{
+" restrict to only git and mercurial
+let g:signify_vcs_list = [ 'git', 'hg' ]
+let signify_sign_weight = 'none'
+let g:signify_sign_color_inherit_from_linenr = 1
+" }}}
 
-		" settings for excel.vim {{{
-		let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docx,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx'
-		" }}}
+" settings for excel.vim {{{
+let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docx,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx'
+" }}}
 
-		" tranpose characters as a single command {{{
-		nnoremap <silent> <Plug>TransposeCharacters xp :call repeat#set("\<Plug>TransposeCharacters")<CR>
-		nmap cp <Plug>TransposeCharacters
-		" }}}
+" tranpose characters as a single command {{{
+nnoremap <silent> <Plug>TransposeCharacters xp :call repeat#set("\<Plug>TransposeCharacters")<CR>
+nmap cp <Plug>TransposeCharacters
+" }}}
 
-		" smooth scroll {{{
-		noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
-		noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
-		noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
-		noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
-		" }}}
+" smooth scroll {{{
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+" }}}
 
-		" visually expand region {{{
-		map è <Plug>(expand_region_expand)
-		map à <Plug>(expand_region_shrink)
-		" }}}
+" visually expand region {{{
+map è <Plug>(expand_region_expand)
+map à <Plug>(expand_region_shrink)
+" }}}
 
-		" setting for improved incremental search {{{
-		map / <Plug>(incsearch-forward)
-		map ? <Plug>(incsearch-backward)
-		map g/ <Plug>(incsearch-stay)
-		" set improved magic option
-		let g:incsearch#magic = '\v'
-		" " turn off highlight after searching related motions
-		" set hlsearch
-		" let g:incsearch#auto_nohlsearch = 1
-		" map n <Plug>(incsearch-nohl-n)
-		" map N <Plug>(incsearch-nohl-N)
-		" map * <Plug>(incsearch-nohl-*)
-		" map # <Plug>(incsearch-nohl-#)
-		" map g* <Plug>(incsearch-nohl-g*)
-		" map g# <Plug>(incsearch-nohl-g#)
-		" }}}
+" setting for improved incremental search {{{
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" set improved magic option
+let g:incsearch#magic = '\v'
+" " turn off highlight after searching related motions
+" set hlsearch
+" let g:incsearch#auto_nohlsearch = 1
+" map n <Plug>(incsearch-nohl-n)
+" map N <Plug>(incsearch-nohl-N)
+" map * <Plug>(incsearch-nohl-*)
+" map # <Plug>(incsearch-nohl-#)
+" map g* <Plug>(incsearch-nohl-g*)
+" map g# <Plug>(incsearch-nohl-g#)
+" }}}
