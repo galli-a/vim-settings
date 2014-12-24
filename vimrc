@@ -878,3 +878,7 @@ let g:incsearch#magic = '\v'
 " map g* <Plug>(incsearch-nohl-g*)
 " map g# <Plug>(incsearch-nohl-g#)
 " }}}
+
+" help save files that require sudo privileges {{{
+cmap w!! w !sudo tee % >/dev/null
+" }}}
