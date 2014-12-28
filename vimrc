@@ -123,6 +123,8 @@ Bundle 'terryma/vim-expand-region'
 Bundle 'haya14busa/incsearch.vim'
 " manage files and directories
 Bundle 'c0r73x/vimdir.vim'
+" man page reader
+Bundle 'Z1MM32M4N/vim-superman'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim'
 " different color for different levels of nested parentheses
