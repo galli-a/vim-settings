@@ -740,7 +740,7 @@ augroup CSV_Editing
 	autocmd!
 	autocmd BufRead,BufWritePost *.csv,*.tsv :%ArrangeColumn
 	autocmd BufWritePre *.csv,*.tsv :%UnArrangeColumn
-augroup end
+augroup END
 " }}}
 
 " define text objects for markdown headers, (not for visual mode) {{{
