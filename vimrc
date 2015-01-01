@@ -258,6 +258,11 @@ if has("win32") || has("win64")
 end
 " }}}
 
+" enable mouse support {{{
+set mouse=a
+set ttymouse=xterm2
+" }}}
+
 " set external grep program to grep on windows {{{
 if has("win32") || has("win64")
 	set grepprg=grep\ -nH
