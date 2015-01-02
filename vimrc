@@ -188,6 +188,12 @@ set t_Co=256
 set modelines=0
 " }}}
 
+" define autogroup for vimrc settings {{{
+augroup vimrc
+	autocmd!
+augroup END
+" }}}
+
 " wrap lines, only at word boundaries {{{
 set wrap
 set linebreak
@@ -327,8 +333,8 @@ nmap <silent> <Leader>ss :e $HOME/vim-settings/vimrc<CR>
 
 " highlight current line {{{
 set cursorline
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
+autocmd vimrc WinEnter * setlocal cursorline
+autocmd vimrc WinLeave * setlocal nocursorline
 " }}}
 
 " speed up scrolling {{{
