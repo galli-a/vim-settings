@@ -3,6 +3,7 @@ set nocompatible
 " }}}
 
 " set encoding to UTF-8 {{{
+scriptencoding utf-8
 set encoding=utf-8
 " }}}
 
