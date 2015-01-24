@@ -127,6 +127,8 @@ Bundle 'c0r73x/vimdir.vim'
 Bundle 'Z1MM32M4N/vim-superman'
 " highlight trailing whitespace
 Bundle 'ntpeters/vim-better-whitespace'
+" Reopen files at the last edit place
+Bundle 'dietsche/vim-lastplace'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim'
 " different color for different levels of nested parentheses
