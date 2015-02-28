@@ -130,6 +130,8 @@ Bundle 'Z1MM32M4N/vim-superman'
 Bundle 'ntpeters/vim-better-whitespace'
 " Reopen files at the last edit place
 Bundle 'dietsche/vim-lastplace'
+" add indentation-based motions
+Bundle 'jeetsukumaran/vim-indentwise'
 " recursive diff on two directories
 Bundle 'galli-a/DirDiff.vim'
 " different color for different levels of nested parentheses
