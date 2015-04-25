@@ -865,3 +865,15 @@ let g:incsearch#magic = '\v'
 " help save files that require sudo privileges {{{
 cmap w!! w !sudo tee % >/dev/null
 " }}}
+
+" change background between light and dark {{{
+function! g:ToggleBackground()
+	if &background=="dark"
+		set background=light
+	else
+		set background=dark
+	endif
+endfunction
+map <silent> <F5> :call g:ToggleBackground()<cr>
+map! <silent> <F5> <C-O>:call g:ToggleBackground()<cr>
+" }}}
