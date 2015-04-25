@@ -64,8 +64,6 @@ Bundle 'gregsexton/gitv'
 Bundle 'voithos/vim-python-matchit'
 " defines text object representing lines of code at the same indentation level
 Bundle 'michaeljsmith/vim-indent-object'
-" automatically changes backroung based on sunrise/sunset
-Bundle 'amdt/sunset'
 " lets you set up project-specific .vimrc files
 Bundle 'krisajenkins/vim-projectlocal'
 " resizes focussed window to increase readability
@@ -604,41 +602,6 @@ nnoremap <F2> :!ctags -R<CR>
 nnoremap <C-S-F3> :TlistToggle<CR>
 " put Taglist window on the right
 let Tlist_Use_Right_Window=1
-" }}}
-
-" sunset configuration {{{
-let g:sunset_latitude = 45.66
-let g:sunset_longitude = 8.73
-let g:sunset_utc_offset = 1 " no DST
-" let g:sunset_utc_offset = 2 " DST
-let g:loaded_sunset = 1 " disable plugin
-function! g:sunset_daytime_callback()
-	if exists(":PowerlineReloadColorscheme")
-		let g:Powerline_colorscheme = "solarized"
-		PowerlineReloadColorscheme
-		":source $MYVIMRC<CR>:noh<CR>
-	endif
-	set background=light
-endfunction
-function! g:sunset_nighttime_callback()
-	if exists(":PowerlineReloadColorscheme")
-		let g:Powerline_colorscheme = "solarized256"
-		PowerlineReloadColorscheme
-		":source $MYVIMRC<CR>:noh<CR>
-	endif
-	set background=dark
-endfunction
-" function to quickly call the sunset callbacks
-function! g:toggle_sunset()
-	if &background=="dark"
-		call g:sunset_daytime_callback()
-	else
-		call g:sunset_nighttime_callback()
-	endif
-endfunction
-" map <F5> to toggle sunset settings
-map <silent> <F5> :call g:toggle_sunset()<CR>
-map! <silent> <F5> <C-O>:call g:toggle_sunset()<CR>
 " }}}
 
 " map <F8> to backtick {{{
