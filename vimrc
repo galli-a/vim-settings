@@ -101,7 +101,7 @@ Bundle 'mhinz/vim-signify'
 " recursively select and deselect larger text objects
 Bundle 'gcmt/wildfire.vim'
 " open excel files for display
-Bundle 'yakiang/vim-scripts.vim'
+Bundle 'vim-scripts/excel.vim'
 " add a Bundle menu
 Bundle 'mbadran/headlights'
 " swap two text objects
