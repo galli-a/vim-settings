@@ -239,11 +239,14 @@ colorscheme solarized
 " set font {{{
 if has("unix")
 	" set guifont=Inconsolata-dz\ for\ Powerline:h12
-	set guifont=Sauce\ Code\ Powerline:h14
+	" set guifont=Sauce\ Code\ Powerline:h14
+	set guifont=Hack:h14
 	" set guifont=Cousine\ for\ Powerline:h14
 else
-	set guifont=Sauce\ Code\ Powerline:h12:cANSI
+	" set guifont=Sauce\ Code\ Powerline:h12:cANSI
+	set guifont=Hack:h14:cANSI
 endif
+set linespace=3
 " }}}
 
 " set comments in italic {{{
