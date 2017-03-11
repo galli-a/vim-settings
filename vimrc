@@ -51,7 +51,7 @@ Bundle 'tpope/vim-commentary'
 " filesystem explorer
 Bundle 'scrooloose/nerdtree'
 " display results from external syntax checker
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 " fuzzy file and buffer finder
 Bundle 'kien/ctrlp.vim'
 " alternative matcher for CtrlP
@@ -79,7 +79,8 @@ Bundle 'dhruvasagar/vim-table-mode.git'
 " file and buffer explorer - td
 Bundle 'sjbach/lusty.git'
 " statusbar replacement
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 " allows navigating between vim and tmux splits
 Bundle 'christoomey/vim-tmux-navigator'
 " better viewing of csv files
@@ -239,14 +240,14 @@ colorscheme solarized
 " set font {{{
 if has("unix")
 	" set guifont=Inconsolata-dz\ for\ Powerline:h12
-	" set guifont=Sauce\ Code\ Powerline:h14
-	set guifont=Hack:h14
+	set guifont=Sauce\ Code\ Powerline:h14
+	" set guifont=Hack:h14
 	" set guifont=Cousine\ for\ Powerline:h14
 else
-	" set guifont=Sauce\ Code\ Powerline:h12:cANSI
-	set guifont=Hack:h14:cANSI
+	set guifont=Sauce\ Code\ Powerline:h12:cANSI
+	" set guifont=Hack:h14:cANSI
 endif
-set linespace=3
+set linespace=2
 " }}}
 
 " set comments in italic {{{
@@ -674,19 +675,19 @@ for key in pairs
 endfor
 " }}}
 
-" Syntastic settings {{{
-if has("unix")
-	let g:syntastic_error_symbol = '✗✗'
-	let g:syntastic_style_error_symbol = '✠✠'
-	let g:syntastic_warning_symbol = '∆∆'
-	let g:syntastic_style_warning_symbol = '≈≈'
-else
-	let g:syntastic_error_symbol = 'XX'
-	let g:syntastic_style_error_symbol = 'oo'
-	let g:syntastic_warning_symbol = '!!'
-	let g:syntastic_style_warning_symbol = '??'
-end
-" }}}
+" " Syntastic settings {{{
+" if has("unix")
+" 	let g:syntastic_error_symbol = '✗✗'
+" 	let g:syntastic_style_error_symbol = '✠✠'
+" 	let g:syntastic_warning_symbol = '∆∆'
+" 	let g:syntastic_style_warning_symbol = '≈≈'
+" else
+" 	let g:syntastic_error_symbol = 'XX'
+" 	let g:syntastic_style_error_symbol = 'oo'
+" 	let g:syntastic_warning_symbol = '!!'
+" 	let g:syntastic_style_warning_symbol = '??'
+" end
+" " }}}
 
 " supertab {{{
 let g:SuperTabDefaultCompletionType = "context"
