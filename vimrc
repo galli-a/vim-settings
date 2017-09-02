@@ -31,7 +31,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 " visualize undo tree
-Bundle 'sjl/gundo.vim'
+Bundle 'simnalamburt/vim-mundo'
 " solarized color scheme
 Bundle 'altercation/vim-colors-solarized'
 " add surround action
@@ -423,8 +423,8 @@ vmap <expr> D DVB_Duplicate()
 set autoread
 " }}}
 
-" Gundo {{{
-nnoremap <F6> :GundoToggle<CR>
+" Mundo {{{
+nnoremap <F6> :MundoToggle<CR>
 " }}}
 
 " NERDTree {{{
